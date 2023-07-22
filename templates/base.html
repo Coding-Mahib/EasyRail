@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
+                <!-- Outer circle -->
+                <circle cx="50" cy="50" r="45" fill="#1976D2" />
+              
+                <!-- Inner circle -->
+                <circle cx="50" cy="50" r="30" fill="#FFF" />
+              
+                <!-- Rails -->
+                <rect x="40" y="35" width="20" height="10" fill="#1976D2" />
+                <rect x="40" y="55" width="20" height="10" fill="#1976D2" />
+            </svg>
+              
+            <span viewBox="0 0 100 100">EasyRail</span>
+        </div>
+        <input type="checkbox" id="toggle-nav" class="toggle-nav">
+        <label for="toggle-nav" class="menu-icon">&#9776;</label>
+        <ul class="navbar-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+    <script>
+        const toggleNav = document.getElementById('toggle-nav'), navbarMenu = document.querySelector('.navbar-menu');
+        toggleNav.addEventListener('click', () => {
+            navbarMenu.classList.toggle('show-menu');
+        });
+
+    </script>
+</body>
+</html>

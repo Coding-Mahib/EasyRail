@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url('/static/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+}
+.navbar-brand span{
+    padding: 8px;
+}
+.menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hide the menu icon on larger screens */
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin: 0 10px;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #555;
+    }
+
+    .navbar-menu li {
+        margin: 10px;
+    }
+
+    .navbar-menu li a {
+        display: block;
+        padding: 8px;
+    }
+
+    .navbar-menu li a:hover {
+        background-color: #444;
+    }
+
+    .navbar-menu li.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        background-color: #777;
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+}*/
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #555;
+    }
+
+    .navbar-menu li {
+        margin: 10px;
+    }
+
+    .navbar-menu li a {
+        display: block;
+        padding: 8px;
+    }
+
+    .navbar-menu li a:hover {
+        background-color: #444;
+    }
+    .navbar-menu.show-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #555;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .navbar-menu.show-menu li {
+        margin: 10px;
+    }
+
+    .navbar-menu.show-menu li a {
+        display: block;
+        padding: 8px;
+    }
+
+    .navbar-menu.show-menu li a:hover {
+        background-color: #444;
+    }
+
+    .navbar-menu.show-menu {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .dropdown-menu {
+        display: none;
+        background-color: #777;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown-menu.show-dropdown {
+        display: block;
+        transform: translateX(0);
+    }
+}
+.toggle-nav{
+    display: none;
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container-center{
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    background-color: #ffffffee;
+    margin-top: 6%;
+    border-radius: 20px;
+    max-height: 60%;
+    overflow-y: scroll;
+}
+.container-center .header{
+    background: #033f52;
+    color: #fff;
+    width: 100%;
+    padding: 18px;
+    font-size: 19px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+.container-center .content{
+    width: 100%;
+    padding: 10px;
+}
+.container-center .content ol{
+    padding: 8px;
+}
+.blue-mid{
+    font-size: 17px;
+    color: #033f52;
+    font-weight: 600;
+}
+.btn{
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    padding: 8px;
+    border-radius: 10px;
+    background: #037e44;
+    color: #fff;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+}
